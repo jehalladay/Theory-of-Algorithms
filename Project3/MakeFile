@@ -1,0 +1,40 @@
+# Project 3: Hashtable with Heapsort 
+# Theory of Algorithms
+# James Halladay
+# Date: 10/9/2021
+# 
+# Description: This file will compile the 
+
+
+CC = g++
+CFLAGS  = -g -Wall
+RM = rm -f
+LOG = test.log
+HISTORY = testHistory.log
+
+
+
+default: test
+
+
+runflag: 
+	@touch runflag
+
+test.o: test.cpp
+	@echo "Compiling..."
+	@$(CC) $(CFLAGS) -c test.cpp
+
+test: test.o runflag
+	@rm runflag
+	@$(CC) $(CFLAGS) test.o -o test
+	
+	@echo "" > test.log
+	@echo "\nRunning Tests: `date`\n" >> test.log
+	@valgrind -q --leak-check=yes ./test >> test.log 2>&1
+	@echo "\nFinished Tests: `date` \n\n" >> test.log
+
+	@echo "\nRunning Tests: `date`\n" 
+	@./test
+	@echo "\nFinished Tests: `date` \n\n"
+
+	@cat test.log >> testHistory.log

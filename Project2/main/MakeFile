@@ -1,0 +1,57 @@
+# define some Makefile variables for the compiler and compiler flags
+# to use Makefile variables later in the Makefile: $()
+#
+#  -g    adds debugging information to the executable file
+#  -Wall turns on most, but not all, compiler warnings
+#
+# for C++ define  CC = g++
+CC = g++
+CFLAGS  = -g -Wall
+RM = rm -f
+
+# typing 'make' will invoke the first target entry in the file
+# (in this case the default target entry)
+# you can name this target entry anything, but "default" or "all"
+# are the most commonly used names by convention
+#
+default: all
+
+# To create the executable file clock we need the object files
+# MST.o, graph.o:
+#
+MST:  MST.o graph.o
+	$(CC) $(CFLAGS) MST.o graph.o -o MST 
+
+# To create the object file graph.o, we need the source
+# files graph.cpp, graph.h, linked_list.h,:
+#
+graph.o:  graph.cpp graph.h linked_list.h
+	$(CC) $(CFLAGS) -c graph.cpp
+
+MST.o:  MST.cpp graph.cpp graph.h linked_list.h
+	$(CC) $(CFLAGS) -c MST.cpp
+
+# To create the executable file clock we need the object files
+# journey.o, graph.o:
+#
+journey:  journey.o graph.o
+	$(CC) $(CFLAGS) -o  journey journey.o graph.o
+
+# To create the object file clockTypeImp.o, we need the source
+# files clockTypeImp.cpp, clockType.h:
+#
+graph.o:  graph.cpp graph.h
+	$(CC) $(CFLAGS) -c graph.cpp
+
+journey.o:  journey.cpp graph.h
+	$(CC) $(CFLAGS) -c journey.cpp
+
+# To start over from scratch, type 'make clean'.  This
+# removes the executable file, as well as old .o object
+# files and *~ backup files:
+#
+clean: clean
+	@rm journey MST *.o *~
+
+
+

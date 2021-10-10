@@ -46,7 +46,7 @@ List<string> read_file(string source, Graph &G);
 void arg_check(int argc, char* argv[]);
 
 int main(int argc, char* argv[]) {
-    arg_check(argc, argv);
+    // arg_check(argc, argv);
 
     Graph G, Path;
     string city1 = argv[2], city2;
@@ -57,11 +57,16 @@ int main(int argc, char* argv[]) {
         city2 = argv[3];
     }
 
-    // MST = G.MST(city_to_index(city1, cities));
+    cout << endl << "We will now find the shortest path from " << city1 << " to " << city2 << "." << endl << endl;
+
     Path = G.ShortestPath(city_to_index(city1, cities), city_to_index(city2, cities));
 
-    cout << "Distance from " << city1 << " to " << city2 << ": " << Path.total_weight() << endl;
+    cout << "Distance from " << city1 << " to " << city2 << ": " << Path.total_weight() << " miles" << endl << endl;
     Path.print_edges(cout, cities);
+
+    // Path = G.Dijkstra(city_to_index(city1, cities));
+    // Path.print_edges(cout, cities);
+
 
     return 0;
 }
@@ -108,7 +113,7 @@ List<string> read_file(string source, Graph &G) {
         throw;
     }
 
-    cout << "reading file" << endl;
+    // cout << "reading file" << endl;
 
     // throw away all contents of the file preceeding the first city, Youngstown, OH.
     while(town != "Youngstown,") {
@@ -135,7 +140,7 @@ List<string> read_file(string source, Graph &G) {
         G.add_vertex();
 
         // here we will read the distances between cities as edges between nodes
-        for (i = 0; i < id; i++) {
+        for (i = id - 1; i >= 0; i--) {
             file >> dist;
             G.add_edge(i, id, dist);
         }

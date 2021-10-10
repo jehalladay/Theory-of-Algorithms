@@ -134,7 +134,7 @@ List<string> read_file(string source, Graph &G) {
         G.add_vertex();
 
         // here we will read the distances between cities as edges between nodes
-        for (i = 0; i < id; i++) {
+        for (i = id - 1; i >= 0; i--) {
             file >> dist;
             G.add_edge(i, id, dist);
         }

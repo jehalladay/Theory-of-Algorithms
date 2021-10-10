@@ -128,19 +128,20 @@ void Graph::add_edge(int to, int from, int weight) {
 
 void Graph::print_edges(ostream &ofs, List<string> cities) {
     string to = "", from = "";
-    ofs << "To:\t\tFrom:\t\tWeight:" << endl;
+    ofs << "#:\tFrom:\t\tTo:\t\tDistance:" << endl << endl;
     for(int i = 0; i < edges; i++) {
         to = cities[edge_list[i].to + start];
         from = cities[edge_list[i].from + start];
-        ofs << to.substr(0, 5)   + ", " + to.substr(to.length() - 2, 2)     << "\t" 
-            << from.substr(0, 5) + ", " + from.substr(from.length() - 2, 2) << "\t"
-            << edge_list[i].weight << endl;
+        ofs << i+1 << ":\t" 
+            << from.substr(0, 6) + ", " + from.substr(from.length() - 2, 2) << "\t"
+            << to.substr(0, 6)   + ", " + to.substr(to.length() - 2, 2)     << "\t" 
+            << "distance = " << edge_list[i].weight << " miles" << endl;
     }
 }
 
 
 Graph Graph::MST(int first) {
-    int V_1 = first - start, V_2;
+    int V_1 = first, V_2;
     Graph mst(degree, start);
     Queue Q;
     edge e;
@@ -186,17 +187,141 @@ Graph Graph::MST(int first) {
 
 Graph Graph::Dijkstra(int first) {
     Graph DJK(degree, start);
+    int V_1 = first, V_2;
+    List<int> dist, Q;
+    List<List<edge>> paths;
+    edge e;
 
+    for(int i = 0; i < degree; i++) {
+        List<edge> path;
+        paths.push(path);
+        dist.push(2147483647);
+        if(i != V_1) {
+            Q.push(i);
+        }
+    }
 
+    dist[V_1] = 0;
+
+    for(int i = 0; i < degree; i++) {
+        colors[V_1] = Black;
+        for(V_2 = 0; V_2 < degree; V_2++) {
+            if(adjacency_matrix[V_1][V_2] != 0 && dist[V_2] > dist[V_1] + adjacency_matrix[V_1][V_2]) {
+                dist[V_2] = dist[V_1] + adjacency_matrix[V_1][V_2];
+                
+                e.from = V_1;
+                e.to = V_2;
+                e.weight = adjacency_matrix[V_1][V_2];
+
+                // now we update the path
+                List<edge> path;
+                for(int i = 0; i < paths[V_1].length(); i++) {
+                    path.push(paths[V_1][i]);
+                }
+                path.push(e);
+                paths[V_2] = path;
+            }
+        }
+
+        // find the vertex with the least distance
+        if (Q.length() > 0) {
+            int min_vertex = Q[0], index = 0;
+            for(int i = 1; i < Q.length(); i++) {
+                if(dist[Q[i]] < dist[min_vertex] && colors[Q[i]] != Black) {
+                    min_vertex = Q[i];
+                    index = i;
+                }
+            }
+
+            V_1 = min_vertex;
+            Q.delete_item(index);
+        }
+    }
+
+    // now we need to add the edges to the graph
+    DJK.add_edge(paths[0][0].to, paths[0][0].from, paths[0][0].weight);
+    for(int i = 0; i < degree; i++) {
+        for(int j = 0; j < paths[i].length(); j++) {
+            if(DJK.adjacency_matrix[paths[i][j].to][paths[i][j].from] == 0) {
+                DJK.add_edge(paths[i][j].to, paths[i][j].from, paths[i][j].weight);
+            }
+        }
+    }
+
+    // reset colors to white
+    for(int i = 0; i < degree; i++) {
+        colors[i] = White;
+    }
 
     return DJK;
 }
 
 Graph Graph::ShortestPath(int first, int last) {
-    Graph DJK = Dijkstra(first), Path(degree, start);
+    Graph DJK(degree, start), Path(degree, start);
+    int V_1 = first, V_2;
+    List<int> dist, Q;
+    List<List<edge>> paths;
+    edge e;
+
+    for(int i = 0; i < degree; i++) {
+        List<edge> path;
+        paths.push(path);
+        dist.push(2147483647);
+        if(i != V_1) {
+            Q.push(i);
+        }
+    }
+
+    dist[V_1] = 0;
+
+    for(int i = 0; i < degree; i++) {
+        colors[V_1] = Black;
+        for(V_2 = 0; V_2 < degree; V_2++) {
+            if(adjacency_matrix[V_1][V_2] != 0 && dist[V_2] > dist[V_1] + adjacency_matrix[V_1][V_2]) {
+                dist[V_2] = dist[V_1] + adjacency_matrix[V_1][V_2];
+                
+                e.from = V_1;
+                e.to = V_2;
+                e.weight = adjacency_matrix[V_1][V_2];
+
+                // now we update the path
+                List<edge> path;
+                for(int i = 0; i < paths[V_1].length(); i++) {
+                    path.push(paths[V_1][i]);
+                }
+                path.push(e);
+                paths[V_2] = path;
+            }
+        }
+
+        // find the vertex with the least distance
+        if (Q.length() > 0) {
+            int min_vertex = Q[0], index = 0;
+            for(int i = 1; i < Q.length(); i++) {
+                if(dist[Q[i]] < dist[min_vertex] && colors[Q[i]] != Black) {
+                    min_vertex = Q[i];
+                    index = i;
+                }
+            }
+
+            V_1 = min_vertex;
+            Q.delete_item(index);
+        }
+    }
+
+    // now we need to add the edges from paths[last] to the Path graph
+    for(int i = 0; i < paths[last].length(); i++) {
+        Path.add_edge(paths[last][i].to, paths[last][i].from, paths[last][i].weight);
+    }
+
+    // reset colors to white
+    for(int i = 0; i < degree; i++) {
+        colors[i] = White;
+    }
 
     return Path;
 }
+
 
 int Graph::get_edges() {
     return edges;

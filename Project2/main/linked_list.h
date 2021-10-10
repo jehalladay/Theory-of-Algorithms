@@ -35,7 +35,7 @@ class List {
 
         // destructor
 
-        ~List();
+        // ~List();
 
         // empty, traverse, push, unshift, delete, pop, shift, get
 
@@ -94,14 +94,14 @@ List<N>::List(int length, N fill) {
 }
 
 
-template <class N>
-List<N>::~List() {
-    // if not empty, list is still in use
-    if(empty()) {
-        delete head;
-        delete tail;
-    }
-}
+// template <class N>
+// List<N>::~List() {
+//     // if not empty, list is still in use
+//     if(empty()) {
+//         delete head;
+//         delete tail;
+//     }
+// }
 
 
 template <class N>
@@ -121,7 +121,7 @@ void List<N>::delete_item(int id) {
     element *prior, *next, *c;
 
     if(empty() || id >= _length || id < 0) {
-        cout << "Index does not exist" << endl;
+        cout << "Delete: Index does not exist" << endl;
         throw;
     } 
 
