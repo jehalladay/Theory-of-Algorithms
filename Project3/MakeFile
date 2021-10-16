@@ -3,38 +3,141 @@
 # James Halladay
 # Date: 10/9/2021
 # 
-# Description: This file will compile the 
+# Description: This file will compile the program and 
+# 			   serves as a test logger for the program.
+# 
 
 
 CC = g++
 CFLAGS  = -g -Wall
 RM = rm -f
-LOG = test.log
-HISTORY = testHistory.log
+LOG = ./logs/test.log
+TESTHISTORY = ./logs/testHistory.log
+MAINHISTORY = ./logs/mainHistory.log
+HISTORY = ./logs/history.log
 
 
 
 default: test
 
 
+
+starttest:
+	@echo "" > ${LOG}
+	@echo "\nStarting Tests: `date`" >> ${LOG}
+
+
+startmain:
+	@echo "" > ${LOG}
+	@echo "\nStarting Main: `date`" >> ${LOG}
+
+
 runflag: 
 	@touch runflag
 
-test.o: test.cpp
-	@echo "Compiling..."
-	@$(CC) $(CFLAGS) -c test.cpp
 
-test: test.o runflag
+hash.o: hash.cpp hash.h
+	@echo "Compiling hash.cpp"
+	@echo "\tCompiling hash.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c hash.cpp -o ./objects/hash.o >> ${LOG} 2>&1
+
+
+heap.o: heap.cpp heap.h
+	@echo "Compiling heap.cpp"
+	@echo "\tCompiling heap.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c heap.cpp -o ./objects/heap.o >> ${LOG} 2>&1
+
+
+main.o: assign3.cpp
+	@echo "Compiling assign3.cpp"
+	@echo "\tCompiling assign3.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c assign3.cpp -o ./objects/assign3.o >> ${LOG} 2>&1
+
+
+test.o: test.cpp
+	@echo "Compiling test.cpp"
+	@echo "\tCompiling test.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c test.cpp -o ./objects/test.o >> ${LOG} 2>&1
+
+
+utility.o: utility.cpp utility.h
+	@echo "Compiling utility.cpp"
+	@echo "\tCompiling utility.cpp: `date`" >> ${LOG} 2>&1
+	-@$(CC) $(CFLAGS) -c utility.cpp -o ./objects/utility.o >> ${LOG} 2>&1
+
+
+main.c: hash.o heap.o main.o utility.o
+	@echo "Linking..."
+	@echo "\tLinking main: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) assign3.o ./objects/hash.o ./objects/heap.o ./objects/utility.o -o assign3 >> ${LOG} 2>&1
+	@echo "Built main"
+	@echo "\tBuilt main: `date`" >> ${LOG}
+
+
+test.c: hash.o heap.o test.o utility.o  
+	@echo "Linking..."
+	@echo "\tLinking tests: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) ./objects/test.o ./objects/heap.o ./objects/hash.o ./objects/utility.o -o test >> ${LOG} 2>&1
+	@echo "Built test"
+	@echo "\tBuilt test: `date`" >> ${LOG}
+
+
+test: starttest runflag test.c
 	@rm runflag
-	@$(CC) $(CFLAGS) test.o -o test
-	
-	@echo "" > test.log
-	@echo "\nRunning Tests: `date`\n" >> test.log
-	@valgrind -q --leak-check=yes ./test >> test.log 2>&1
-	@echo "\nFinished Tests: `date` \n\n" >> test.log
+	 
+	@echo "\nRunning Tests: `date`\n" >> ${LOG}
+	-@valgrind -q --leak-check=yes ./test >> ${LOG} 2>&1
+	@echo "\nFinished Tests: `date` \n\n" >> ${LOG}
 
 	@echo "\nRunning Tests: `date`\n" 
-	@./test
-	@echo "\nFinished Tests: `date` \n\n"
+	-@./test
+	@echo "\nFinished Tests: `date` \n"
 
-	@cat test.log >> testHistory.log
+	@cat ${LOG} >> ${TESTHISTORY}
+	@cat ${LOG} >> ${HISTORY}
+
+
+
+main: startmain runflag main.c
+	@rm runflag
+	@echo "\nRunning Main: `date`\n" >> ${LOG}
+	-@valgrind -q --leak-check=yes ./assign3 >> ${LOG} 2>&1
+	@echo "\nFinished Main: `date` \n\n" >> ${LOG} 2>&1
+
+	@echo "\nRunning Main: `date`\n"
+	-@./assign3
+	@echo "\nFinished Main: `date` \n"
+
+	@cat ${LOG} >> ${MAINHISTORY}
+	@cat ${LOG} >> ${HISTORY}
+
+
+clean: runflag
+	@echo "" > ${LOG}
+	@echo "\nCleaning up..."
+	@echo "\nCleaning up: `date`\n" >> ${LOG}
+
+	@$(RM) ./objects/*.o
+	@$(RM) ./runflag
+	@$(RM) ./assign3
+	@$(RM) ./test
+
+	@echo "Finished Cleaning\n"
+	@echo "Finished Cleaning: `date`\n\n" >> ${LOG}
+
+	@cat ${LOG} >> ${HISTORY}
+
+
+clean_all: runflag
+	@echo "\nCleaning up..."
+
+	@$(RM) ./assign3
+	@$(RM) ./test
+	@$(RM) ./runflag
+	@$(RM) ./objects/*.o
+	@echo "" > ${LOG}
+	@echo "" > ${TESTHISTORY}
+	@echo "" > ${MAINHISTORY}
+	@echo "" > ${HISTORY}
+
+	@echo "Finished Cleaning\n"
