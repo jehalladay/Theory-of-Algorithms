@@ -23,10 +23,10 @@ const string MODIFY_DATE = "10-11-21";
 
 
 /*
-    Function reads the input file and stores the data in a vector of strings for testing purposes.
+    Function reads the input file and stores the data in a vector of elements for testing purposes.
 
     input: string file_name
-    output: vector<string>
+    output: vector<elements>
 */
 vector<element> readfile(string file_name)
 {
@@ -34,7 +34,7 @@ vector<element> readfile(string file_name)
     Hashtable hash_table(20000);
     ifstream file;
     file.open(file_name);
-    string line = "";
+    string line = "", clean_line = "";
     element word;
 
     if(!file.is_open()) {
@@ -42,29 +42,20 @@ vector<element> readfile(string file_name)
         throw file_name;
     }
 
-    cout << "\tReading file: " << file_name << endl;
 
     // first we get past all the comments by project gutenberg
     while(line != "Menendez") {
         file >> line;
     }
 
-    for(int i = 0; i < 150; i++) {
-        file >> line;
-        line = scrub(line);
-        if(line != "") {
-            word.entry = line;
-            word.key = i;
-            word.frequency = 1;
-            elements.push_back(word);
-        }
-    }
-    
     // Gutenberg is the first unique word to show up after the contents of the novel, 
     //      so we stop reading the file here.
     while(line != "Gutenberg") {
         file >> line;
-        hash_table.insert(line);
+        clean_line = scrub(line);
+        if(clean_line != "") {
+            hash_table.insert(clean_line); 
+        }
     }
 
     cout << "\t\tHashtable Size:\t\t\t"        << hash_table.get_size()            << endl;
@@ -92,7 +83,7 @@ Hashtable read_file(string file_name)
     Hashtable hash_table(2500);
     ifstream file;
     file.open(file_name);
-    string line = "";
+    string line = "", clean_line = "";
     element word;
 
     if(!file.is_open()) {
@@ -100,7 +91,6 @@ Hashtable read_file(string file_name)
         throw file_name;
     }
 
-    cout << "\tReading file: " << file_name << endl;
 
     // first we get past all the comments by project gutenberg
     while(line != "Menendez") {
@@ -111,7 +101,10 @@ Hashtable read_file(string file_name)
     //      so we stop reading the file here.
     while(line != "Gutenberg") {
         file >> line;
-        hash_table.insert(line);
+        clean_line = scrub(line);
+        if(clean_line != "") {
+            hash_table.insert(clean_line); 
+        }
     }
 
     file.close();
@@ -133,7 +126,7 @@ Hashtable read_file(string file_name, double max_load_factor) {
     Hashtable hash_table(max_load_factor, 2500);
     ifstream file;
     file.open(file_name);
-    string line = "";
+    string line = "", clean_line = "";
     element word;
 
     if(!file.is_open()) {
@@ -141,7 +134,6 @@ Hashtable read_file(string file_name, double max_load_factor) {
         throw file_name;
     }
 
-    cout << "\tReading file: " << file_name << endl;
 
     // first we get past all the comments by project gutenberg
     while(line != "Menendez") {
@@ -152,7 +144,10 @@ Hashtable read_file(string file_name, double max_load_factor) {
     //      so we stop reading the file here.
     while(line != "Gutenberg") {
         file >> line;
-        hash_table.insert(line);
+        clean_line = scrub(line);
+        if(clean_line != "") {
+            hash_table.insert(clean_line); 
+        }
     }
 
     file.close();
@@ -175,6 +170,10 @@ string scrub(string word)
             scrubbed += (char)tolower(word[i]);
         }
     }
+
+    // if(scrubbed == "quarrel?") {
+    //     cout << "WE have found something &***************************************************" << endl;
+    // }
 
     return scrubbed;
 }

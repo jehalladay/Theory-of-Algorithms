@@ -23,6 +23,7 @@
 using namespace std;
 
 const string MODIFY_DATE = "10-11-21";
+const element EMPTY_TABLE = {"NULL_ELEMENT", -1, -1};
 
 
 
@@ -72,7 +73,7 @@ Hashtable::Hashtable() {
     _max_load_factor = .80;
     calculate_load_factor();
 
-    cout << "\tConstructor 1: Hashtable created" << endl;
+    // cout << "\tConstructor 1: Hashtable created" << endl;
 }
 
 /*
@@ -94,7 +95,7 @@ Hashtable::Hashtable(int capacity) {
     _max_load_factor = .80;
     calculate_load_factor();
 
-    cout << "\tConstructor 2: Hashtable created" << endl;
+    // cout << "\tConstructor 2: Hashtable created" << endl;
 }
 
 
@@ -117,7 +118,7 @@ Hashtable::Hashtable(double max_load_factor, int capacity) {
     _max_load_factor = max_load_factor;
     calculate_load_factor();
 
-    cout << "\tConstructor 3: Hashtable created" << endl;
+    // cout << "\tConstructor 3: Hashtable created" << endl;
 }
 
 
@@ -127,7 +128,7 @@ Hashtable::Hashtable(double max_load_factor, int capacity) {
         Has no contents as no pointers are used and no memory is allocated
 */
 Hashtable::~Hashtable() {
-    cout << "\tDestructor: Hashtable destroyed" << endl;
+    // cout << "\tDestructor: Hashtable destroyed" << endl;
 }
 
 
@@ -136,7 +137,7 @@ void Hashtable::calculate_load_factor() {
     _load_factor = (_size * 1.0) / _capacity;
 
     if(_load_factor > _max_load_factor) {
-        cout << "\t\tHashtable: load factor is greater than max load factor" << endl;
+        // cout << "\t\tHashtable: load factor is greater than max load factor" << endl;
         resize();
     }
 }
@@ -340,12 +341,66 @@ void Hashtable::remove(string entry) {
             }
         }
     }
+
+    calculate_load_factor();
 }
 
 
-// need to make these two methods
-// element Hashtable::pop(string entry);
-// element Hashtable::pop();
+// Removal Methods
+
+/*
+    Method removes the first element it finds and returns it
+        If the entry is not found, the element is returned with 
+        a frequency and key of -1
+
+    output: element    
+*/
+element Hashtable::pop() {
+    element e = EMPTY_TABLE;
+
+    for(int i = 0; i < _capacity; i++) {
+        if((int)_table[i].size() > 0) {
+            e = _table[i][0];
+            _table[i].erase(_table[i].begin());
+            _size--;
+            i = _capacity;
+        }
+    }
+
+    calculate_load_factor();
+
+    return e;
+}
+
+
+
+/*
+    Method removes the element specified by the input string and returns it
+        If the entry is not found, the element is returned with 
+        a frequency and key of -1
+
+    input: string entry
+    output: element    
+*/
+element Hashtable::pop(string entry) {
+    element e = EMPTY_TABLE;
+
+    for(int i = 0; i < _capacity; i++) {
+        for(int j = 0; j < (int)_table[i].size(); j++) {
+            if(_table[i][j].entry == entry) {
+                e = _table[i][j];
+                _table[i].erase(_table[i].begin() + j);
+                _size--;
+                i = _capacity;
+                j = (int)_table[i].size();
+            }
+        }
+    }
+
+    calculate_load_factor();
+
+    return e;
+}
 
 
 

@@ -1,89 +1,9 @@
 
 
-Starting Tests: Mon Oct 11 20:20:29 MDT 2021
-	Compiling hash.cpp: Mon Oct 11 20:20:29 MDT 2021
-	Compiling heap.cpp: Mon Oct 11 20:20:30 MDT 2021
-	Compiling test.cpp: Mon Oct 11 20:20:31 MDT 2021
-	Compiling utility.cpp: Mon Oct 11 20:20:31 MDT 2021
-	Linking tests: Mon Oct 11 20:20:32 MDT 2021
-	Built test: Mon Oct 11 20:20:32 MDT 2021
-
-Running Tests: Mon Oct 11 20:20:32 MDT 2021
-
-==7361== error calling PR_SET_PTRACER, vgdb might block
-
-Hello, World! from test.cpp   		Last Modified: 10-11-21
-Hello, World! from heap.cpp   		Last Modified: 10-10-21
-Hello, World! from hash.cpp   		Last Modified: 10-11-21
-Hello, World! from utility.cpp		Last Modified: 10-11-21
-
-Testing hash.cpp
-Testing Hashtable: constructor 3
-	Constructor 1: Hashtable created
-	Hashtable test function called
-Testing Hashtable: destructor
-	Destructor: Hashtable destroyed
-Finished hash.cpp tests
-
-Testing utility.cpp
-Testing readfile function: wrong input file
-	Constructor 2: Hashtable created
-	File not found: test.txt
-	Destructor: Hashtable destroyed
-Testing readfile function: correct input file
-	Constructor 2: Hashtable created
-	Reading file: A Scandal In Bohemia.txt
-		Hashtable Size:			14619
-		Hashtable Capacity:		20000
-		Hashtable Load Factor:		0.73095
-		Hashtable Max Load Factor:	0.8
-	Destructor: Hashtable destroyed
-Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
-	hello world
-Testing scrub function: readfile internal usage
-	Scrub Passed
-Finished utility.cpp tests
-
-Testing test.cpp
-	Constructor 3: Hashtable created
-	Reading file: A Scandal In Bohemia.txt
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-Testing Hashtable and read_file:
-		Hashtable Size:			14654
-		Hashtable Capacity:		40000
-		Hashtable Load Factor:		0.36635
-		Hashtable Max Load Factor:	0.5
-	Constructor 3: Hashtable created
-	Reading file: A Scandal In Bohemia.txt
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-	Destructor: Hashtable destroyed
-Testing Hashtable and read_file:
-		Hashtable Size:			14654
-		Hashtable Capacity:		40000
-		Hashtable Load Factor:		0.36635
-		Hashtable Max Load Factor:	0.7
-	Constructor 3: Hashtable created
-	Reading file: A Scandal In Bohemia.txt
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-		Hashtable: load factor is greater than max load factor
-	Destructor: Hashtable destroyed
-Testing Hashtable and read_file:
-		Hashtable Size:			14654
-		Hashtable Capacity:		20000
-		Hashtable Load Factor:		0.7327
-		Hashtable Max Load Factor:	0.8
-Finished test.cpp tests
-	Destructor: Hashtable destroyed
-
-Ending execution of test.cpp
-
-Finished Tests: Mon Oct 11 20:20:42 MDT 2021 
-
-
+Starting Main: Sun Oct 24 19:52:55 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:52:55 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:52:55 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:52:56 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:52:56 MDT 2021
+	Linking main: Sun Oct 24 19:52:57 MDT 2021
+	Built Main: Sun Oct 24 19:52:57 MDT 2021

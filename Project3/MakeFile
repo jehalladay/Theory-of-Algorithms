@@ -48,10 +48,16 @@ heap.o: heap.cpp heap.h
 	-@$(CC) $(CFLAGS) -c heap.cpp -o ./objects/heap.o >> ${LOG} 2>&1
 
 
-main.o: assign3.cpp
+assign3.o: assign3.cpp
 	@echo "Compiling assign3.cpp"
 	@echo "\tCompiling assign3.cpp: `date`" >> ${LOG}
 	-@$(CC) $(CFLAGS) -c assign3.cpp -o ./objects/assign3.o >> ${LOG} 2>&1
+
+
+main.o: main.cpp
+	@echo "Compiling main.cpp"
+	@echo "\tCompiling main.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c main.cpp -o ./objects/main.o >> ${LOG} 2>&1
 
 
 test.o: test.cpp
@@ -66,12 +72,20 @@ utility.o: utility.cpp utility.h
 	-@$(CC) $(CFLAGS) -c utility.cpp -o ./objects/utility.o >> ${LOG} 2>&1
 
 
+assign3.c: hash.o heap.o assign3.o utility.o
+	@echo "Linking..."
+	@echo "\tLinking Assign3: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) ./objects/assign3.o ./objects/hash.o ./objects/heap.o ./objects/utility.o -o assign3 >> ${LOG} 2>&1
+	@echo "Built Assign3"
+	@echo "\tBuilt Assign3: `date`" >> ${LOG}
+
+
 main.c: hash.o heap.o main.o utility.o
 	@echo "Linking..."
 	@echo "\tLinking main: `date`" >> ${LOG}
-	-@$(CC) $(CFLAGS) assign3.o ./objects/hash.o ./objects/heap.o ./objects/utility.o -o assign3 >> ${LOG} 2>&1
-	@echo "Built main"
-	@echo "\tBuilt main: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) ./objects/main.o ./objects/hash.o ./objects/heap.o ./objects/utility.o -o main >> ${LOG} 2>&1
+	@echo "Built Main"
+	@echo "\tBuilt Main: `date`" >> ${LOG}
 
 
 test.c: hash.o heap.o test.o utility.o  
@@ -98,14 +112,26 @@ test: starttest runflag test.c
 
 
 
+assign3: startmain runflag assign3.c
+	@rm runflag
+	@echo "\nRunning Assign3: `date`\n" >> ${LOG}
+	-@valgrind -q --leak-check=yes ./assign3 "A Scandal in Bohemia.txt" sorted.txt >> ${LOG} 2>&1
+	@echo "\nFinished Assign3: `date` \n\n" >> ${LOG} 2>&1
+
+	@echo "\nRunning Assign3: `date`\n"
+	-@./assign3 "A Scandal in Bohemia.txt" sorted.txt
+	@echo "\nFinished Assign3: `date` \n"
+
+	@cat ${LOG} >> ${MAINHISTORY}
+	@cat ${LOG} >> ${HISTORY}
+
+
+# -@valgrind -q --leak-check=yes ./main >> ${LOG} 2>&1
 main: startmain runflag main.c
 	@rm runflag
-	@echo "\nRunning Main: `date`\n" >> ${LOG}
-	-@valgrind -q --leak-check=yes ./assign3 >> ${LOG} 2>&1
-	@echo "\nFinished Main: `date` \n\n" >> ${LOG} 2>&1
 
 	@echo "\nRunning Main: `date`\n"
-	-@./assign3
+	-@./main
 	@echo "\nFinished Main: `date` \n"
 
 	@cat ${LOG} >> ${MAINHISTORY}
@@ -119,7 +145,7 @@ clean: runflag
 
 	@$(RM) ./objects/*.o
 	@$(RM) ./runflag
-	@$(RM) ./assign3
+	@$(RM) ./main
 	@$(RM) ./test
 
 	@echo "Finished Cleaning\n"
@@ -130,8 +156,8 @@ clean: runflag
 
 clean_all: runflag
 	@echo "\nCleaning up..."
-
-	@$(RM) ./assign3
+ 
+	@$(RM) ./main
 	@$(RM) ./test
 	@$(RM) ./runflag
 	@$(RM) ./objects/*.o

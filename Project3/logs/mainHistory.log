@@ -1,1 +1,463 @@
 
+
+
+Starting Main: Sun Oct 24 16:40:47 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:40:47 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:40:48 MDT 2021
+	Compiling main.cpp: Sun Oct 24 16:40:48 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:40:48 MDT 2021
+	Linking main: Sun Oct 24 16:40:49 MDT 2021
+g++: error: main.o: No such file or directory
+	Built Main: Sun Oct 24 16:40:49 MDT 2021
+
+Running Main: Sun Oct 24 16:40:49 MDT 2021
+
+valgrind: ./main: No such file or directory
+
+Finished Main: Sun Oct 24 16:40:49 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 16:42:29 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:42:29 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:42:30 MDT 2021
+	Compiling main.cpp: Sun Oct 24 16:42:30 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:42:31 MDT 2021
+	Linking main: Sun Oct 24 16:42:31 MDT 2021
+	Built Main: Sun Oct 24 16:42:32 MDT 2021
+
+Running Main: Sun Oct 24 16:42:32 MDT 2021
+
+==11174== error calling PR_SET_PTRACER, vgdb might block
+argc: 1
+argv[0]: ./main
+
+Hello, World! from inside main.cpp	Last Modified: 10-24-21
+
+Finished Main: Sun Oct 24 16:42:32 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:41:41 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:41:41 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:41:42 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:41:42 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:41:43 MDT 2021
+	Linking Assign3: Sun Oct 24 18:41:43 MDT 2021
+	Built Assign3: Sun Oct 24 18:41:44 MDT 2021
+
+Running Assign3: Sun Oct 24 18:41:44 MDT 2021
+
+==12909== error calling PR_SET_PTRACER, vgdb might block
+argc: 1
+argv[0]: ./assign3
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+
+Finished Assign3: Sun Oct 24 18:41:44 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:44:56 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:44:56 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:44:56 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:44:57 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:44:58 MDT 2021
+	Linking Assign3: Sun Oct 24 18:44:58 MDT 2021
+	Built Assign3: Sun Oct 24 18:44:58 MDT 2021
+
+Running Assign3: Sun Oct 24 18:44:58 MDT 2021
+
+==12968== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+
+Finished Assign3: Sun Oct 24 18:44:59 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:46:16 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:46:16 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:46:17 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:46:17 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:46:18 MDT 2021
+	Linking Assign3: Sun Oct 24 18:46:18 MDT 2021
+	Built Assign3: Sun Oct 24 18:46:19 MDT 2021
+
+Running Assign3: Sun Oct 24 18:46:19 MDT 2021
+
+==13028== error calling PR_SET_PTRACER, vgdb might block
+Incorrect number of arguments
+terminate called without an active exception
+Aborted (core dumped)
+
+Finished Assign3: Sun Oct 24 18:46:19 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:46:34 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:46:34 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:46:35 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:46:36 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:46:36 MDT 2021
+	Linking Assign3: Sun Oct 24 18:46:37 MDT 2021
+	Built Assign3: Sun Oct 24 18:46:37 MDT 2021
+
+Running Assign3: Sun Oct 24 18:46:37 MDT 2021
+
+==13088== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+
+Finished Assign3: Sun Oct 24 18:46:38 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:47:05 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:47:05 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:47:06 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:47:06 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:47:07 MDT 2021
+	Linking Assign3: Sun Oct 24 18:47:07 MDT 2021
+	Built Assign3: Sun Oct 24 18:47:07 MDT 2021
+
+Running Assign3: Sun Oct 24 18:47:07 MDT 2021
+
+==13148== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+
+Finished Assign3: Sun Oct 24 18:47:08 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:52:22 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:52:23 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:52:23 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:52:24 MDT 2021
+assign3.cpp: In function ‘int main(int, char**)’:
+assign3.cpp:48:5: error: ‘hashtable’ was not declared in this scope
+     hashtable ht = read_file(argv[1], .65);
+     ^~~~~~~~~
+assign3.cpp:48:5: note: suggested alternative: ‘Hashtable’
+     hashtable ht = read_file(argv[1], .65);
+     ^~~~~~~~~
+     Hashtable
+	Compiling utility.cpp: Sun Oct 24 18:52:24 MDT 2021
+	Linking Assign3: Sun Oct 24 18:52:25 MDT 2021
+	Built Assign3: Sun Oct 24 18:52:25 MDT 2021
+
+Running Assign3: Sun Oct 24 18:52:25 MDT 2021
+
+==13207== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+
+Finished Assign3: Sun Oct 24 18:52:26 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:53:06 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:53:06 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:53:07 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:53:07 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:53:08 MDT 2021
+	Linking Assign3: Sun Oct 24 18:53:09 MDT 2021
+	Built Assign3: Sun Oct 24 18:53:09 MDT 2021
+
+Running Assign3: Sun Oct 24 18:53:09 MDT 2021
+
+==13267== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+	Constructor 3: Hashtable created
+	Reading file: A Scandal in Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+
+Finished Assign3: Sun Oct 24 18:53:12 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:56:16 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:56:16 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:56:17 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:56:18 MDT 2021
+assign3.cpp: In function ‘void write_file(std::__cxx11::string, std::vector<element>&)’:
+assign3.cpp:70:22: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i = 0; i < sorted.size(); i++) {
+                    ~~^~~~~~~~~~~~~~~
+	Compiling utility.cpp: Sun Oct 24 18:56:18 MDT 2021
+	Linking Assign3: Sun Oct 24 18:56:19 MDT 2021
+	Built Assign3: Sun Oct 24 18:56:19 MDT 2021
+
+Running Assign3: Sun Oct 24 18:56:19 MDT 2021
+
+==13327== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+	Constructor 3: Hashtable created
+	Reading file: A Scandal in Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+	Destructor: Hashtable destroyed
+
+Finished Assign3: Sun Oct 24 18:56:31 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 18:56:41 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:56:41 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:56:42 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 18:56:42 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:56:43 MDT 2021
+	Linking Assign3: Sun Oct 24 18:56:44 MDT 2021
+	Built Assign3: Sun Oct 24 18:56:44 MDT 2021
+
+Running Assign3: Sun Oct 24 18:56:44 MDT 2021
+
+==13387== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+	Constructor 3: Hashtable created
+	Reading file: A Scandal in Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+	Destructor: Hashtable destroyed
+
+Finished Assign3: Sun Oct 24 18:56:56 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 19:02:10 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:02:10 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:02:11 MDT 2021
+	Compiling assign3.cpp: Sun Oct 24 19:02:11 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:02:12 MDT 2021
+	Linking Assign3: Sun Oct 24 19:02:13 MDT 2021
+	Built Assign3: Sun Oct 24 19:02:13 MDT 2021
+
+Running Assign3: Sun Oct 24 19:02:13 MDT 2021
+
+==13447== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-10-21
+	Constructor 3: Hashtable created
+	Reading file: A Scandal in Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+	Destructor: Hashtable destroyed
+
+Finished Assign3: Sun Oct 24 19:02:25 MDT 2021 
+
+
+
+
+Starting Main: Sun Oct 24 19:07:58 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:07:58 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:07:59 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:07:59 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:08:00 MDT 2021
+	Linking main: Sun Oct 24 19:08:00 MDT 2021
+	Built Main: Sun Oct 24 19:08:00 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:11:14 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:11:14 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:11:15 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:11:15 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:11:16 MDT 2021
+	Linking main: Sun Oct 24 19:11:16 MDT 2021
+	Built Main: Sun Oct 24 19:11:16 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:12:11 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:12:11 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:12:11 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:12:12 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:12:12 MDT 2021
+	Linking main: Sun Oct 24 19:12:13 MDT 2021
+	Built Main: Sun Oct 24 19:12:13 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:22:50 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:22:50 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:22:50 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:22:51 MDT 2021
+main.cpp: In function ‘void experiment(double)’:
+main.cpp:118:38: error: no matching function for call to ‘Hashtable::insert(std::__cxx11::string&, int&)’
+             ht.insert(word, frequency);
+                                      ^
+In file included from main.cpp:27:0:
+hash.h:41:14: note: candidate: void Hashtable::insert(element)
+         void insert(element e);
+              ^~~~~~
+hash.h:41:14: note:   candidate expects 1 argument, 2 provided
+hash.h:72:14: note: candidate: void Hashtable::insert(std::__cxx11::string)
+         void insert(string entry);
+              ^~~~~~
+hash.h:72:14: note:   candidate expects 1 argument, 2 provided
+main.cpp:119:40: error: no matching function for call to ‘Heap::insert(std::__cxx11::string&, int&)’
+             heap.insert(word, frequency);
+                                        ^
+In file included from main.cpp:28:0:
+heap.h:36:14: note: candidate: void Heap::insert(element)
+         void insert(element);
+              ^~~~~~
+heap.h:36:14: note:   candidate expects 1 argument, 2 provided
+main.cpp:139:10: error: ‘class Heap’ has no member named ‘remove’
+     heap.remove(word);
+          ^~~~~~
+main.cpp: At global scope:
+main.cpp:146:1: error: expected declaration before ‘}’ token
+ }
+ ^
+	Compiling utility.cpp: Sun Oct 24 19:22:51 MDT 2021
+	Linking main: Sun Oct 24 19:22:52 MDT 2021
+	Built Main: Sun Oct 24 19:22:52 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:23:53 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:23:53 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:23:54 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:23:54 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:23:55 MDT 2021
+	Linking main: Sun Oct 24 19:23:55 MDT 2021
+	Built Main: Sun Oct 24 19:23:56 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:27:14 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:27:14 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:27:15 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:27:15 MDT 2021
+main.cpp: In function ‘void experiment(double)’:
+main.cpp:111:18: error: ‘high_resolution_clock’ has not been declared
+     auto start = high_resolution_clock::now();
+                  ^~~~~~~~~~~~~~~~~~~~~
+main.cpp:113:17: error: ‘high_resolution_clock’ has not been declared
+     auto stop = high_resolution_clock::now();
+                 ^~~~~~~~~~~~~~~~~~~~~
+main.cpp:114:21: error: ‘duration_cast’ was not declared in this scope
+     auto duration = duration_cast<milliseconds>(stop - start);
+                     ^~~~~~~~~~~~~
+main.cpp:114:21: note: suggested alternative:
+In file included from main.cpp:26:0:
+/usr/include/c++/7/chrono:194:7: note:   ‘std::chrono::duration_cast’
+       duration_cast(const duration<_Rep, _Period>& __d)
+       ^~~~~~~~~~~~~
+main.cpp:114:35: error: ‘milliseconds’ was not declared in this scope
+     auto duration = duration_cast<milliseconds>(stop - start);
+                                   ^~~~~~~~~~~~
+main.cpp:114:35: note: suggested alternative:
+In file included from main.cpp:26:0:
+/usr/include/c++/7/chrono:603:43: note:   ‘std::chrono::milliseconds’
+     typedef duration<int64_t, milli>      milliseconds;
+                                           ^~~~~~~~~~~~
+	Compiling utility.cpp: Sun Oct 24 19:27:16 MDT 2021
+	Linking main: Sun Oct 24 19:27:16 MDT 2021
+	Built Main: Sun Oct 24 19:27:17 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:27:51 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:27:51 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:27:52 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:27:52 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:27:53 MDT 2021
+	Linking main: Sun Oct 24 19:27:53 MDT 2021
+	Built Main: Sun Oct 24 19:27:54 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:30:06 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:30:06 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:30:06 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:30:07 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:30:08 MDT 2021
+	Linking main: Sun Oct 24 19:30:08 MDT 2021
+	Built Main: Sun Oct 24 19:30:08 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:41:23 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:41:23 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:41:24 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:41:24 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:41:25 MDT 2021
+	Linking main: Sun Oct 24 19:41:25 MDT 2021
+	Built Main: Sun Oct 24 19:41:26 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:44:41 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:44:41 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:44:41 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:44:42 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:44:42 MDT 2021
+	Linking main: Sun Oct 24 19:44:43 MDT 2021
+	Built Main: Sun Oct 24 19:44:43 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:45:55 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:45:56 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:45:56 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:45:57 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:45:57 MDT 2021
+	Linking main: Sun Oct 24 19:45:58 MDT 2021
+	Built Main: Sun Oct 24 19:45:58 MDT 2021
+
+
+Starting Main: Sun Oct 24 19:52:55 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 19:52:55 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 19:52:55 MDT 2021
+	Compiling main.cpp: Sun Oct 24 19:52:56 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 19:52:56 MDT 2021
+	Linking main: Sun Oct 24 19:52:57 MDT 2021
+	Built Main: Sun Oct 24 19:52:57 MDT 2021

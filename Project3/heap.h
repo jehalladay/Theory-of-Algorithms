@@ -15,8 +15,28 @@
 #include <string>
 #include <vector>
 
+#include "hash.h"
+
 using namespace std;   
 
+
+/*
+    Class is a Max Heap.
+*/
+class Heap {
+    private:
+        vector<element> _heap;
+        int size;
+        void heap_up(int);
+        void heap_down(int);
+        void replace_parent(int);
+    public:
+        Heap();
+        ~Heap();
+        void insert(element);
+        element pop_root();
+        vector<element> heap_sort(Hashtable);
+};
 
 
 void heaptest();

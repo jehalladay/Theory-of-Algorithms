@@ -24,6 +24,7 @@ const string MODIFY_DATE = "10-11-21";
 // Here we will place function prototypes that execute the tests
 void init_test1();
 void init_test2();
+void init_test3();
 
 
 /*
@@ -37,15 +38,16 @@ int main() {
     init_test1();
     heaptest();
     hashtest1();
-    utilitytest1();
+    // utilitytest1();
 
-    cout << endl << "Testing hash.cpp" << endl;
-    hashtest2();
+    // cout << endl << "Testing hash.cpp" << endl; 
+    // hashtest2();
     cout << endl << "Testing utility.cpp" << endl;
     utilitytest2();
-    
+     
     cout << endl << "Testing test.cpp" << endl;
-    init_test2();
+    // init_test2();
+    init_test3();
 
     cout << endl << "Ending execution of test.cpp" << endl;
     return 0;
@@ -94,5 +96,30 @@ void init_test2() {
     cout << "\t\tHashtable Load Factor:\t\t"   << hash_table.get_load_factor()     << endl;
     cout << "\t\tHashtable Max Load Factor:\t" << hash_table.get_max_load_factor() << endl;
 
+
+    cout << "Testing the pop method:" << endl;
+    element e = hash_table.pop();
+    cout << "\t\tElement: " << e.entry << endl;
+    cout << "\t\tElement: " << e.frequency << endl;
+    cout << "\t\tElement: " << e.key << endl;
+
+
     cout << "Finished test.cpp tests" << endl;
+}
+
+
+void init_test3() {
+    Hashtable hash_table = read_file("A Scandal In Bohemia.txt", .5);
+    
+    cout << "Testing Hashtable and read_file:" << endl;
+
+    cout << "\t\tHashtable Size:\t\t\t"        << hash_table.get_size()            << endl;
+    cout << "\t\tHashtable Capacity:\t\t"      << hash_table.get_capacity()        << endl;
+    cout << "\t\tHashtable Load Factor:\t\t"   << hash_table.get_load_factor()     << endl;
+    cout << "\t\tHashtable Max Load Factor:\t" << hash_table.get_max_load_factor() << endl;
+
+    vector<element> word_list = Heap().heap_sort(hash_table);
+    cout << "Word:\t\t\t\t" << word_list[0].entry << endl;
+    cout << "Frequency:\t\t\t" << word_list[0].frequency << endl;
+    cout << "Size of Wordlist:\t" << word_list.size() << endl;
 }

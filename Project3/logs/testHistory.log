@@ -33093,3 +33093,3557 @@ Ending execution of test.cpp
 Finished Tests: Mon Oct 11 20:20:42 MDT 2021 
 
 
+
+
+Starting Tests: Sun Oct 24 16:43:11 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:43:11 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:43:11 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:43:12 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:43:12 MDT 2021
+	Linking tests: Sun Oct 24 16:43:13 MDT 2021
+	Built test: Sun Oct 24 16:43:13 MDT 2021
+
+Running Tests: Sun Oct 24 16:43:13 MDT 2021
+
+==11233== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-10-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			14619
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.73095
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:43:24 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:46:45 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:46:45 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:46:46 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:46:47 MDT 2021
+test.cpp: In function ‘void init_test2()’:
+test.cpp:99:37: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:108:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/7/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:117:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/7/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:127:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/7/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:166:7: note:   no known conversion for argument 1 from ‘element’ to ‘long int’
+/usr/include/c++/7/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:170:7: note:   no known conversion for argument 1 from ‘element’ to ‘long unsigned int’
+/usr/include/c++/7/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:174:7: note:   no known conversion for argument 1 from ‘element’ to ‘bool’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘element’ to ‘short int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:181:7: note:   no known conversion for argument 1 from ‘element’ to ‘short unsigned int’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘element’ to ‘int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:192:7: note:   no known conversion for argument 1 from ‘element’ to ‘unsigned int’
+/usr/include/c++/7/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:201:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long int’
+/usr/include/c++/7/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:205:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long unsigned int’
+/usr/include/c++/7/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:220:7: note:   no known conversion for argument 1 from ‘element’ to ‘double’
+/usr/include/c++/7/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:224:7: note:   no known conversion for argument 1 from ‘element’ to ‘float’
+/usr/include/c++/7/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:232:7: note:   no known conversion for argument 1 from ‘element’ to ‘long double’
+/usr/include/c++/7/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:245:7: note:   no known conversion for argument 1 from ‘element’ to ‘const void*’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/basic_string.h:6284:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6284:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   ‘element’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/system_error:217:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/7/system_error:217:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const std::error_code&’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:497:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:502:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:508:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:514:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘signed char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:519:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘unsigned char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:539:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   mismatched types ‘const _CharT*’ and ‘element’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:556:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:569:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const signed char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:574:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const unsigned char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:682:5: note: candidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
+     operator<<(_Ostream&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:682:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = element]’:
+test.cpp:99:55:   required from here
+/usr/include/c++/7/ostream:682:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:79:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Resetiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:109:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:143:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setbase’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:178:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   ‘element’ is not derived from ‘std::_Setfill<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:208:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setprecision’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:238:5: note:   template argument deduction/substitution failed:
+test.cpp:99:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setw’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:311:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   ‘element’ is not derived from ‘std::_Put_money<_MoneyT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:363:5: note:   template argument deduction/substitution failed:
+test.cpp:99:55: note:   ‘element’ is not derived from ‘std::_Put_time<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+test.cpp:100:37: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:108:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/7/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:117:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/7/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:127:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/7/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:166:7: note:   no known conversion for argument 1 from ‘element’ to ‘long int’
+/usr/include/c++/7/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:170:7: note:   no known conversion for argument 1 from ‘element’ to ‘long unsigned int’
+/usr/include/c++/7/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:174:7: note:   no known conversion for argument 1 from ‘element’ to ‘bool’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘element’ to ‘short int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:181:7: note:   no known conversion for argument 1 from ‘element’ to ‘short unsigned int’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘element’ to ‘int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:192:7: note:   no known conversion for argument 1 from ‘element’ to ‘unsigned int’
+/usr/include/c++/7/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:201:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long int’
+/usr/include/c++/7/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:205:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long unsigned int’
+/usr/include/c++/7/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:220:7: note:   no known conversion for argument 1 from ‘element’ to ‘double’
+/usr/include/c++/7/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:224:7: note:   no known conversion for argument 1 from ‘element’ to ‘float’
+/usr/include/c++/7/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:232:7: note:   no known conversion for argument 1 from ‘element’ to ‘long double’
+/usr/include/c++/7/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:245:7: note:   no known conversion for argument 1 from ‘element’ to ‘const void*’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/basic_string.h:6284:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6284:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   ‘element’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/system_error:217:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/7/system_error:217:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const std::error_code&’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:497:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:502:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:508:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:514:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘signed char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:519:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘unsigned char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:539:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   mismatched types ‘const _CharT*’ and ‘element’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:556:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:569:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const signed char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:574:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const unsigned char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:682:5: note: candidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
+     operator<<(_Ostream&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:682:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = element]’:
+test.cpp:100:55:   required from here
+/usr/include/c++/7/ostream:682:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:79:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Resetiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:109:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:143:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setbase’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:178:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   ‘element’ is not derived from ‘std::_Setfill<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:208:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setprecision’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:238:5: note:   template argument deduction/substitution failed:
+test.cpp:100:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setw’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:311:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   ‘element’ is not derived from ‘std::_Put_money<_MoneyT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:363:5: note:   template argument deduction/substitution failed:
+test.cpp:100:55: note:   ‘element’ is not derived from ‘std::_Put_time<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+test.cpp:101:37: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:108:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/7/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:117:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/7/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:127:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/7/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:166:7: note:   no known conversion for argument 1 from ‘element’ to ‘long int’
+/usr/include/c++/7/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:170:7: note:   no known conversion for argument 1 from ‘element’ to ‘long unsigned int’
+/usr/include/c++/7/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:174:7: note:   no known conversion for argument 1 from ‘element’ to ‘bool’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘element’ to ‘short int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:181:7: note:   no known conversion for argument 1 from ‘element’ to ‘short unsigned int’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘element’ to ‘int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:192:7: note:   no known conversion for argument 1 from ‘element’ to ‘unsigned int’
+/usr/include/c++/7/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:201:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long int’
+/usr/include/c++/7/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:205:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long unsigned int’
+/usr/include/c++/7/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:220:7: note:   no known conversion for argument 1 from ‘element’ to ‘double’
+/usr/include/c++/7/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:224:7: note:   no known conversion for argument 1 from ‘element’ to ‘float’
+/usr/include/c++/7/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:232:7: note:   no known conversion for argument 1 from ‘element’ to ‘long double’
+/usr/include/c++/7/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:245:7: note:   no known conversion for argument 1 from ‘element’ to ‘const void*’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/basic_string.h:6284:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6284:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   ‘element’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/system_error:217:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/7/system_error:217:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const std::error_code&’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:497:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:502:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:508:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:514:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘signed char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:519:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘unsigned char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:539:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   mismatched types ‘const _CharT*’ and ‘element’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:556:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:569:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const signed char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:574:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const unsigned char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:682:5: note: candidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
+     operator<<(_Ostream&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:682:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = element]’:
+test.cpp:101:55:   required from here
+/usr/include/c++/7/ostream:682:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:79:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Resetiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:109:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:143:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setbase’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:178:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   ‘element’ is not derived from ‘std::_Setfill<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:208:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setprecision’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:238:5: note:   template argument deduction/substitution failed:
+test.cpp:101:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setw’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:311:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   ‘element’ is not derived from ‘std::_Put_money<_MoneyT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:363:5: note:   template argument deduction/substitution failed:
+test.cpp:101:55: note:   ‘element’ is not derived from ‘std::_Put_time<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+test.cpp:102:37: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:108:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:108:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
+/usr/include/c++/7/ostream:117:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:117:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+/usr/include/c++/7/ostream:127:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/7/ostream:127:7: note:   no known conversion for argument 1 from ‘element’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/7/ostream:166:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:166:7: note:   no known conversion for argument 1 from ‘element’ to ‘long int’
+/usr/include/c++/7/ostream:170:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:170:7: note:   no known conversion for argument 1 from ‘element’ to ‘long unsigned int’
+/usr/include/c++/7/ostream:174:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:174:7: note:   no known conversion for argument 1 from ‘element’ to ‘bool’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:91:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘element’ to ‘short int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:181:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:181:7: note:   no known conversion for argument 1 from ‘element’ to ‘short unsigned int’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:105:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘element’ to ‘int’
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:192:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:192:7: note:   no known conversion for argument 1 from ‘element’ to ‘unsigned int’
+/usr/include/c++/7/ostream:201:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:201:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long int’
+/usr/include/c++/7/ostream:205:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:205:7: note:   no known conversion for argument 1 from ‘element’ to ‘long long unsigned int’
+/usr/include/c++/7/ostream:220:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:220:7: note:   no known conversion for argument 1 from ‘element’ to ‘double’
+/usr/include/c++/7/ostream:224:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:224:7: note:   no known conversion for argument 1 from ‘element’ to ‘float’
+/usr/include/c++/7/ostream:232:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:232:7: note:   no known conversion for argument 1 from ‘element’ to ‘long double’
+/usr/include/c++/7/ostream:245:7: note: candidate: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/7/ostream:245:7: note:   no known conversion for argument 1 from ‘element’ to ‘const void*’
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:119:5: note: candidate: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘element’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+In file included from /usr/include/c++/7/string:52:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/basic_string.h:6284:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/7/bits/basic_string.h:6284:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   ‘element’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/system_error:217:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/7/system_error:217:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const std::error_code&’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:497:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘element’)
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:502:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:508:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:514:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘signed char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:519:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘unsigned char’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:539:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   mismatched types ‘const _CharT*’ and ‘element’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from /usr/include/c++/7/ostream:693:0,
+                 from /usr/include/c++/7/iostream:39,
+                 from test.cpp:11:
+/usr/include/c++/7/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:556:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:569:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const signed char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:574:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘const unsigned char*’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from /usr/include/c++/7/iostream:39:0,
+                 from test.cpp:11:
+/usr/include/c++/7/ostream:682:5: note: candidate: template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)
+     operator<<(_Ostream&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/7/ostream:682:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/7/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = element]’:
+test.cpp:102:55:   required from here
+/usr/include/c++/7/ostream:682:5: error: no type named ‘type’ in ‘struct std::enable_if<false, std::basic_ostream<char>&>’
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:79:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Resetiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:79:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Resetiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:109:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setiosflags __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:109:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setiosflags’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:143:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setbase __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:143:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setbase’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:178:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setfill<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:178:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   ‘element’ is not derived from ‘std::_Setfill<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:208:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setprecision __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:208:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setprecision’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:238:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Setw __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:238:5: note:   template argument deduction/substitution failed:
+test.cpp:102:54: note:   cannot convert ‘Hashtable::pop()()’ (type ‘element’) to type ‘std::_Setw’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                        ~~~~~~~~~~~~~~^~
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:311:5: note: candidate: template<class _CharT, class _Traits, class _MoneyT> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_money<_MoneyT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_money<_MoneyT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:311:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   ‘element’ is not derived from ‘std::_Put_money<_MoneyT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+In file included from hash.h:15:0,
+                 from test.cpp:15:
+/usr/include/c++/7/iomanip:363:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Put_time<_CharT>)
+     operator<<(basic_ostream<_CharT, _Traits>& __os, _Put_time<_CharT> __f)
+     ^~~~~~~~
+/usr/include/c++/7/iomanip:363:5: note:   template argument deduction/substitution failed:
+test.cpp:102:55: note:   ‘element’ is not derived from ‘std::_Put_time<_CharT>’
+     cout << "\t\tPop method:\t\t\t" << hash_table.pop() << endl;
+                                                       ^
+	Compiling utility.cpp: Sun Oct 24 16:46:47 MDT 2021
+	Linking tests: Sun Oct 24 16:46:48 MDT 2021
+	Built test: Sun Oct 24 16:46:48 MDT 2021
+
+Running Tests: Sun Oct 24 16:46:48 MDT 2021
+
+==11291== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			14619
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.73095
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:46:59 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:48:30 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:48:30 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:48:31 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:48:31 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:48:32 MDT 2021
+	Linking tests: Sun Oct 24 16:48:33 MDT 2021
+	Built test: Sun Oct 24 16:48:33 MDT 2021
+
+Running Tests: Sun Oct 24 16:48:33 MDT 2021
+
+==11350== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			14619
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.73095
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			quarrel?
+		Pop method:			heavily.
+		Pop method:			important."
+		Pop method:			river."
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:48:43 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:50:50 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:50:50 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:50:51 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:50:51 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:50:52 MDT 2021
+	Linking tests: Sun Oct 24 16:50:52 MDT 2021
+	Built test: Sun Oct 24 16:50:53 MDT 2021
+
+Running Tests: Sun Oct 24 16:50:53 MDT 2021
+
+==11409== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			quarrel?
+		Pop method:			heavily.
+		Pop method:			important."
+		Pop method:			river."
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:51:04 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:52:17 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:52:18 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:52:18 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:52:19 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:52:19 MDT 2021
+	Linking tests: Sun Oct 24 16:52:20 MDT 2021
+	Built test: Sun Oct 24 16:52:20 MDT 2021
+
+Running Tests: Sun Oct 24 16:52:20 MDT 2021
+
+==11468== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			quarrel?
+		Pop method:			heavily.
+		Pop method:			important."
+		Pop method:			river."
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:52:32 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:54:25 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:54:25 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:54:25 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:54:26 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:54:26 MDT 2021
+	Linking tests: Sun Oct 24 16:54:27 MDT 2021
+	Built test: Sun Oct 24 16:54:27 MDT 2021
+
+Running Tests: Sun Oct 24 16:54:27 MDT 2021
+
+==11527== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		40000
+		Hashtable Load Factor:		0.36635
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			14654
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.7327
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			quarrel?
+		Pop method:			heavily.
+		Pop method:			important."
+		Pop method:			river."
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:54:38 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:55:50 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:55:50 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:55:50 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:55:51 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:55:52 MDT 2021
+	Linking tests: Sun Oct 24 16:55:52 MDT 2021
+	Built test: Sun Oct 24 16:55:52 MDT 2021
+
+Running Tests: Sun Oct 24 16:55:52 MDT 2021
+
+==11586== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			bradstreet
+		Pop method:			plovers
+		Pop method:			manorhouse
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:56:02 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 16:58:31 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 16:58:31 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 16:58:32 MDT 2021
+	Compiling test.cpp: Sun Oct 24 16:58:32 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 16:58:33 MDT 2021
+	Linking tests: Sun Oct 24 16:58:33 MDT 2021
+	Built test: Sun Oct 24 16:58:34 MDT 2021
+
+Running Tests: Sun Oct 24 16:58:34 MDT 2021
+
+==11645== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		31968
+		Hashtable Load Factor:		0.260761
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		15984
+		Hashtable Load Factor:		0.521522
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		15984
+		Hashtable Load Factor:		0.521522
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			outrages
+		Pop method:			asked
+		Pop method:			holmeslord
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 16:58:44 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:00:09 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:00:09 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:00:10 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:00:10 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:00:11 MDT 2021
+	Linking tests: Sun Oct 24 17:00:11 MDT 2021
+	Built test: Sun Oct 24 17:00:12 MDT 2021
+
+Running Tests: Sun Oct 24 17:00:12 MDT 2021
+
+==11704== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			sailingship
+		Pop method:			matters
+		Pop method:			nearest
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:00:21 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:00:32 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:00:32 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:00:33 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:00:33 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:00:34 MDT 2021
+	Linking tests: Sun Oct 24 17:00:34 MDT 2021
+	Built test: Sun Oct 24 17:00:35 MDT 2021
+
+Running Tests: Sun Oct 24 17:00:35 MDT 2021
+
+==11763== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			sailingship
+		Pop method:			matters
+		Pop method:			nearest
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:00:44 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:04:40 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:04:40 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:04:41 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:04:41 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:04:42 MDT 2021
+	Linking tests: Sun Oct 24 17:04:42 MDT 2021
+	Built test: Sun Oct 24 17:04:42 MDT 2021
+
+Running Tests: Sun Oct 24 17:04:42 MDT 2021
+
+==11822== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing hash.cpp
+Testing Hashtable: constructor 3
+	Constructor 1: Hashtable created
+	Hashtable test function called
+Testing Hashtable: destructor
+	Destructor: Hashtable destroyed
+Finished hash.cpp tests
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			sailingship
+		Pop method:			matters
+		Pop method:			nearest
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:04:53 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:05:25 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:05:25 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:05:26 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:05:27 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:05:27 MDT 2021
+	Linking tests: Sun Oct 24 17:05:28 MDT 2021
+	Built test: Sun Oct 24 17:05:28 MDT 2021
+
+Running Tests: Sun Oct 24 17:05:28 MDT 2021
+
+==11881== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:05:31 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:32:45 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:32:46 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:32:46 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:32:47 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:32:47 MDT 2021
+	Linking tests: Sun Oct 24 17:32:48 MDT 2021
+	Built test: Sun Oct 24 17:32:48 MDT 2021
+
+Running Tests: Sun Oct 24 17:32:48 MDT 2021
+
+==11940== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			0
+		Pop method:			20
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:32:58 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:33:56 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:33:56 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:33:57 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:33:57 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:33:58 MDT 2021
+	Linking tests: Sun Oct 24 17:33:59 MDT 2021
+	Built test: Sun Oct 24 17:33:59 MDT 2021
+
+Running Tests: Sun Oct 24 17:33:59 MDT 2021
+
+==11999== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			
+		Pop method:			sailingship
+		Pop method:			matters
+		Pop method:			4
+		Pop method:			1
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:34:08 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:34:23 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:34:23 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:34:24 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:34:24 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:34:25 MDT 2021
+	Linking tests: Sun Oct 24 17:34:25 MDT 2021
+	Built test: Sun Oct 24 17:34:25 MDT 2021
+
+Running Tests: Sun Oct 24 17:34:26 MDT 2021
+
+==12058== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		18480
+		Hashtable Load Factor:		0.451082
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Pop method:			91
+		Pop method:			sailingship
+		Pop method:			matters
+		Pop method:			4
+		Pop method:			1
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:34:35 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:35:37 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:35:37 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:35:38 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:35:38 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:35:39 MDT 2021
+	Linking tests: Sun Oct 24 17:35:39 MDT 2021
+	Built test: Sun Oct 24 17:35:40 MDT 2021
+
+Running Tests: Sun Oct 24 17:35:40 MDT 2021
+
+==12117== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: 
+		Element: 91
+		Element: 0
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:35:49 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:41:42 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:41:42 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:41:43 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:41:43 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:41:44 MDT 2021
+	Linking tests: Sun Oct 24 17:41:45 MDT 2021
+	Built test: Sun Oct 24 17:41:45 MDT 2021
+
+Running Tests: Sun Oct 24 17:41:45 MDT 2021
+
+==12272== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: 
+		Element: 91
+		Element: 0
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:41:55 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:42:36 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:42:36 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:42:37 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:42:38 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:42:38 MDT 2021
+	Linking tests: Sun Oct 24 17:42:39 MDT 2021
+	Built test: Sun Oct 24 17:42:39 MDT 2021
+
+Running Tests: Sun Oct 24 17:42:39 MDT 2021
+
+==12331== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: 
+		Element: 91
+		Element: 0
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:42:50 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:43:37 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:43:37 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:43:38 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:43:38 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:43:39 MDT 2021
+	Linking tests: Sun Oct 24 17:43:39 MDT 2021
+	Built test: Sun Oct 24 17:43:40 MDT 2021
+
+Running Tests: Sun Oct 24 17:43:40 MDT 2021
+
+==12390== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+		Hashtable: load factor is greater than max load factor
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+EMPTY*****************
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: 
+		Element: 91
+		Element: 0
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:43:50 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:44:29 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:44:29 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:44:30 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:44:31 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:44:31 MDT 2021
+	Linking tests: Sun Oct 24 17:44:32 MDT 2021
+	Built test: Sun Oct 24 17:44:32 MDT 2021
+
+Running Tests: Sun Oct 24 17:44:32 MDT 2021
+
+==12449== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: bradstreet
+		Element: 12
+		Element: 4
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:44:43 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:45:16 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:45:16 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:45:16 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:45:17 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:45:18 MDT 2021
+	Linking tests: Sun Oct 24 17:45:18 MDT 2021
+	Built test: Sun Oct 24 17:45:18 MDT 2021
+
+Running Tests: Sun Oct 24 17:45:18 MDT 2021
+
+==12508== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: bradstreet
+		Element: 12
+		Element: 4
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:45:29 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 17:45:46 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 17:45:46 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 17:45:46 MDT 2021
+	Compiling test.cpp: Sun Oct 24 17:45:47 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 17:45:48 MDT 2021
+	Linking tests: Sun Oct 24 17:45:48 MDT 2021
+	Built test: Sun Oct 24 17:45:48 MDT 2021
+
+Running Tests: Sun Oct 24 17:45:48 MDT 2021
+
+==12567== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8336
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.4168
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.7
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+	Destructor: Hashtable destroyed
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+Testing the pop method:
+		Element: bradstreet
+		Element: 12
+		Element: 4
+Finished test.cpp tests
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 17:45:59 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 18:28:43 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:28:43 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:28:44 MDT 2021
+	Compiling test.cpp: Sun Oct 24 18:28:45 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:28:45 MDT 2021
+	Linking tests: Sun Oct 24 18:28:46 MDT 2021
+	Built test: Sun Oct 24 18:28:46 MDT 2021
+
+Running Tests: Sun Oct 24 18:28:46 MDT 2021
+
+==12673== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+Hello, World! from utility.cpp		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Destructor: Hashtable destroyed
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 18:29:02 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 18:30:31 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:30:31 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:30:32 MDT 2021
+	Compiling test.cpp: Sun Oct 24 18:30:33 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:30:33 MDT 2021
+	Linking tests: Sun Oct 24 18:30:34 MDT 2021
+	Built test: Sun Oct 24 18:30:34 MDT 2021
+
+Running Tests: Sun Oct 24 18:30:34 MDT 2021
+
+==12732== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Destructor: Hashtable destroyed
+the
+5620
+11461
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 18:30:49 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 18:32:36 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:32:37 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:32:37 MDT 2021
+	Compiling test.cpp: Sun Oct 24 18:32:38 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:32:38 MDT 2021
+	Linking tests: Sun Oct 24 18:32:39 MDT 2021
+	Built test: Sun Oct 24 18:32:39 MDT 2021
+
+Running Tests: Sun Oct 24 18:32:39 MDT 2021
+
+==12791== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Destructor: Hashtable destroyed
+Word:			the
+Frequency:	5620
+Size of Wordlist8335
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 18:32:55 MDT 2021 
+
+
+
+
+Starting Tests: Sun Oct 24 18:33:28 MDT 2021
+	Compiling hash.cpp: Sun Oct 24 18:33:28 MDT 2021
+	Compiling heap.cpp: Sun Oct 24 18:33:29 MDT 2021
+	Compiling test.cpp: Sun Oct 24 18:33:29 MDT 2021
+	Compiling utility.cpp: Sun Oct 24 18:33:30 MDT 2021
+	Linking tests: Sun Oct 24 18:33:30 MDT 2021
+	Built test: Sun Oct 24 18:33:30 MDT 2021
+
+Running Tests: Sun Oct 24 18:33:30 MDT 2021
+
+==12850== error calling PR_SET_PTRACER, vgdb might block
+
+Hello, World! from test.cpp   		Last Modified: 10-11-21
+Hello, World! from heap.cpp   		Last Modified: 10-24-21
+Hello, World! from hash.cpp   		Last Modified: 10-11-21
+
+Testing utility.cpp
+Testing readfile function: wrong input file
+	Constructor 2: Hashtable created
+	File not found: test.txt
+	Destructor: Hashtable destroyed
+Testing readfile function: correct input file
+	Constructor 2: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.8
+	Destructor: Hashtable destroyed
+Testing scrub function: He1l123lo, W''""orld123123123125555@;';./.,;!@^*^(^%&&$#{}|}]\`~!
+	hello world
+Testing scrub function: readfile internal usage
+	Scrub Passed
+Finished utility.cpp tests
+
+Testing test.cpp
+	Constructor 3: Hashtable created
+	Reading file: A Scandal In Bohemia.txt
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+		Hashtable: load factor is greater than max load factor
+Testing Hashtable and read_file:
+		Hashtable Size:			8335
+		Hashtable Capacity:		20000
+		Hashtable Load Factor:		0.41675
+		Hashtable Max Load Factor:	0.5
+	Destructor: Hashtable destroyed
+Word:				the
+Frequency:			5620
+Size of Wordlist:	8335
+	Destructor: Hashtable destroyed
+
+Ending execution of test.cpp
+
+Finished Tests: Sun Oct 24 18:33:45 MDT 2021 
+
+
