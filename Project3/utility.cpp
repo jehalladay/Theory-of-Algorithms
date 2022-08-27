@@ -162,18 +162,14 @@ Hashtable read_file(string file_name, double max_load_factor) {
     input: string word
     output: string
 */
-string scrub(string word)
-{
+string scrub(string word) {
     string scrubbed = "";
+
     for(int i = 0; i < (int)word.length(); i++) {
         if(!ispunct(word[i]) && !isdigit(word[i])) {
             scrubbed += (char)tolower(word[i]);
         }
     }
-
-    // if(scrubbed == "quarrel?") {
-    //     cout << "WE have found something &***************************************************" << endl;
-    // }
 
     return scrubbed;
 }
@@ -229,4 +225,3 @@ void utilitytest2() {
 
     cout << "Finished utility.cpp tests" << endl;
 }
-

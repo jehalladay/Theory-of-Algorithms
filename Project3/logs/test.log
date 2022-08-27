@@ -1,9 +1,23 @@
 
 
-Starting Main: Sun Oct 24 19:52:55 MDT 2021
-	Compiling hash.cpp: Sun Oct 24 19:52:55 MDT 2021
-	Compiling heap.cpp: Sun Oct 24 19:52:55 MDT 2021
-	Compiling main.cpp: Sun Oct 24 19:52:56 MDT 2021
-	Compiling utility.cpp: Sun Oct 24 19:52:56 MDT 2021
-	Linking main: Sun Oct 24 19:52:57 MDT 2021
-	Built Main: Sun Oct 24 19:52:57 MDT 2021
+Starting Main: Thu Oct 28 08:59:53 MDT 2021
+	Compiling hash.cpp: Thu Oct 28 08:59:53 MDT 2021
+	Compiling heap.cpp: Thu Oct 28 08:59:54 MDT 2021
+	Compiling assign3.cpp: Thu Oct 28 08:59:55 MDT 2021
+	Compiling utility.cpp: Thu Oct 28 08:59:56 MDT 2021
+	Linking Assign3: Thu Oct 28 08:59:56 MDT 2021
+	Built Assign3: Thu Oct 28 08:59:57 MDT 2021
+
+Running Assign3: Thu Oct 28 08:59:57 MDT 2021
+
+==239== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./assign3
+argv[1]: A Scandal in Bohemia.txt
+argv[2]: sorted.txt
+
+Hello, World! from inside assign3.cpp	Last Modified: 10-24-21
+
+Finished Assign3: Thu Oct 28 09:00:19 MDT 2021 
+
+

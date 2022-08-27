@@ -1,0 +1,43 @@
+
+
+Starting Main: Mon Nov 15 21:06:36 MST 2021
+
+Starting Main: Mon Nov 15 21:06:36 MST 2021
+	Compiling graph.cpp: Mon Nov 15 21:06:36 MST 2021
+graph.cpp: In member function ‘int Graph::h(int, int)’:
+graph.cpp:330:13: error: ‘sqrt’ was not declared in this scope
+     int x = sqrt(degree) + 1; // assumed number of hops to get to end
+             ^~~~
+graph.cpp:330:13: note: suggested alternative: ‘start’
+     int x = sqrt(degree) + 1; // assumed number of hops to get to end
+             ^~~~
+             start
+	Compiling main.cpp: Mon Nov 15 21:06:37 MST 2021
+	Linking main: Mon Nov 15 21:06:37 MST 2021
+	Built Main: Mon Nov 15 21:06:37 MST 2021
+
+Running Main: Mon Nov 15 21:06:37 MST 2021
+
+==5367== error calling PR_SET_PTRACER, vgdb might block
+argc: 3
+argv[0]: ./main
+argv[1]: 0
+argv[2]: 15
+First, we check for the shortest path from vertex 0 to vertex 15 using the A* Search algorithm.
+#:	From:	To:	Weight:
+
+1:	0, 	2, 	Weight = 10
+2:	2, 	6, 	Weight = 8
+3:	6, 	9, 	Weight = 6
+4:	9, 	15, 	Weight = 15
+
+Next, we check for the shortest path from vertex 0 to vertex 15 using Dijkstra's algorithm to verify our results.
+#:	From:	To:	Weight:
+
+1:	0, 	2, 	Weight = 10
+2:	2, 	6, 	Weight = 8
+3:	6, 	9, 	Weight = 6
+4:	9, 	15, 	Weight = 15
+
+Finished Main: Mon Nov 15 21:06:42 MST 2021 
+

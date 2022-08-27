@@ -29,7 +29,6 @@ class Heap {
         int size;
         void heap_up(int);
         void heap_down(int);
-        void replace_parent(int);
     public:
         Heap();
         ~Heap();

@@ -1,0 +1,131 @@
+# Project 4: A* Search 
+# Theory of Algorithms
+# James Halladay
+# Date: 11/14/2021
+# 
+# Description: This file will compile the program and 
+# 			   serves as a test logger for the program.
+# 
+
+
+CC = g++
+CFLAGS  = -g -Wall
+RM = rm -f
+LOG = ./logs/test.log
+TESTHISTORY = ./logs/testHistory.log
+MAINHISTORY = ./logs/mainHistory.log
+HISTORY = ./logs/history.log
+
+
+
+default: test
+
+
+
+starttest:
+	@echo "" > ${LOG}
+	@echo "\nStarting Tests: `date`" >> ${LOG}
+
+
+startmain:
+	@echo "" > ${LOG}
+	@echo "\nStarting Main: `date`" >> ${LOG}
+	@touch main
+	@touch ./objects/main.o
+	@${RM} main
+	@${RM} ./objects/main.o
+	@echo "\nStarting Main: `date`" >> ${LOG}
+
+
+runflag: 
+	@touch runflag
+
+
+graph.o: graph.cpp graph.h
+	@echo "Compiling graph.cpp"
+	@echo "\tCompiling graph.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c graph.cpp -o ./objects/graph.o >> ${LOG} 2>&1
+
+
+main.o: main.cpp
+	@echo "Compiling main.cpp"
+	@echo "\tCompiling main.cpp: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) -c main.cpp -o ./objects/main.o >> ${LOG} 2>&1
+
+
+
+main.c: graph.o main.o
+	@echo "Linking..."
+	@echo "\tLinking main: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) ./objects/main.o ./objects/graph.o -o main >> ${LOG} 2>&1
+	@echo "Built Main"
+	@echo "\tBuilt Main: `date`" >> ${LOG}
+
+
+test.c: graph.o test.o
+	@echo "Linking..."
+	@echo "\tLinking tests: `date`" >> ${LOG}
+	-@$(CC) $(CFLAGS) ./objects/test.o ./objects/graph.o -o test >> ${LOG} 2>&1
+	@echo "Built test"
+	@echo "\tBuilt test: `date`" >> ${LOG}
+
+
+test: starttest runflag test.c
+	@rm runflag
+	 
+	@echo "\nRunning Tests: `date`\n" >> ${LOG}
+	-@valgrind -q --leak-check=yes ./test 0 15 >> ${LOG} 2>&1
+	@echo "\nFinished Tests: `date` \n\n" >> ${LOG}
+
+	@echo "\nRunning Tests: `date`\n" 
+	-@./test
+	@echo "\nFinished Tests: `date` \n"
+
+	@cat ${LOG} >> ${TESTHISTORY}
+	@cat ${LOG} >> ${HISTORY}
+
+
+main: startmain runflag main.c
+	@rm runflag
+
+	@echo "\nRunning Main: `date`\n" >> ${LOG}
+	-@valgrind -q --leak-check=yes ./main 0 15 >> ${LOG} 2>&1
+	@echo "\nFinished Main: `date` \n" >> ${LOG}
+
+	@echo "\nRunning Main: `date`\n"
+	@./main 5 30
+	@echo "\nFinished Main: `date` \n"
+
+	@cat ${LOG} >> ${MAINHISTORY}
+	@cat ${LOG} >> ${HISTORY}
+
+
+clean: runflag
+	@echo "" > ${LOG}
+	@echo "\nCleaning up..."
+	@echo "\nCleaning up: `date`\n" >> ${LOG}
+
+	@$(RM) ./objects/*.o
+	@$(RM) ./runflag
+	@$(RM) ./main
+	@$(RM) ./test
+
+	@echo "Finished Cleaning\n"
+	@echo "Finished Cleaning: `date`\n\n" >> ${LOG}
+
+	@cat ${LOG} >> ${HISTORY}
+
+
+clean_all: runflag
+	@echo "\nCleaning up..."
+ 
+	@$(RM) ./main
+	@$(RM) ./test
+	@$(RM) ./runflag
+	@$(RM) ./objects/*.o
+	@echo "" > ${LOG}
+	@echo "" > ${TESTHISTORY}
+	@echo "" > ${MAINHISTORY}
+	@echo "" > ${HISTORY}
+
+	@echo "Finished Cleaning\n"
